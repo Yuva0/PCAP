@@ -1,0 +1,16 @@
+__kernel void decoct(__global int* A,__global int* B)
+{
+	int i = get_global_id(0);
+	int val = A[i];
+	int quo;
+	while(A[i] != 0){
+		quo = quo*10+A[i]%8;
+		A[i] = A[i]/8;
+	}
+	printf("I came here");
+	B[i] = 0;
+	while(quo!=0){
+		B[i] = B[i]*10 + quo%8;
+		quo = quo/8;
+	}
+}

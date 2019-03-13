@@ -1,0 +1,7 @@
+__kernel void decoct(__global int* A,__global int* B)
+{
+	int i = get_global_id(0);
+	int val = A[i];
+	printf("%d\n",val);
+	B[i] = 0;
+}

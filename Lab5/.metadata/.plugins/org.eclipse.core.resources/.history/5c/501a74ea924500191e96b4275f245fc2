@@ -1,0 +1,4 @@
+__kernel swap(__global int* A){
+
+	printf("Aaya");
+}

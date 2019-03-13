@@ -1,0 +1,3 @@
+__kernel swap(__global int* A,__global int* B){
+	int i = get_global_id(0);
+}

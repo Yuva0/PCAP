@@ -1,0 +1,10 @@
+__kernel swap(__global int* A,__global int* B){
+	int i = get_global_id(0); // take threads half of array size to minimize threads used
+	int size = get_global_size(0);
+	int eleid = i*2;
+	int temp;
+	temp = A[eleid+1];
+	A[eleid+1] = A[eleid];
+	A[eleid] = temp;
+	printf("Aaya");
+}
