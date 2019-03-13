@@ -21,7 +21,7 @@ int main(void)
 	FILE *fp;
 	char *source_str;
 	size_t source_size;
-	fp = fopen("octal.cl", "r");
+	fp = fopen("bintodec.cl", "r");
 	if (!fp)
 	{
 		fprintf(stderr, "Failed to load kernel.\n");
